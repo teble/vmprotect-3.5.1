@@ -3157,10 +3157,10 @@ bool BaseArchitecture::Prepare(CompileContext &ctx)
 			Notify(mtError, ctx.options.licensing_manager, language[lsLicensingParametersNotInitialized]);
 			return false;
 		}
-		if ((runtime_options & roActivation) && ctx.options.licensing_manager->activation_server().empty()) {
-			Notify(mtError, NULL, language[lsActivationServerNotSpecified]);
-			return false;
-		}
+		// if ((runtime_options & roActivation) && ctx.options.licensing_manager->activation_server().empty()) {
+		// 	Notify(mtError, NULL, language[lsActivationServerNotSpecified]);
+		// 	return false;
+		// }
 	} else {
 		ctx.options.licensing_manager = NULL;
 	}
